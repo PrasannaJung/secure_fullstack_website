@@ -1,0 +1,292 @@
+[
+  {
+    "id": "1",
+    "serviceName": "Router Installation",
+    "category": "Internet",
+    "description": "Professional router installation for seamless connectivity.",
+    "price": "500",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "2 days",
+    "rating": 4.5,
+    "providerName": "TechPro Services",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "John Doe",
+          "image": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "comment": "Excellent service, highly recommended!",
+        "createdAt": "2025-01-01T10:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Jane Smith",
+          "image": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        "comment": "Quick and professional installation.",
+        "createdAt": "2025-01-01T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "serviceName": "Wi-Fi Setup",
+    "category": "Internet",
+    "description": "Setting up Wi-Fi networks for reliable connectivity.",
+    "price": "400",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "1 day",
+    "rating": 4.6,
+    "providerName": "NetSetup Experts",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Alice Brown",
+          "image": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        "comment": "Great service, very efficient.",
+        "createdAt": "2025-01-01T11:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Bob White",
+          "image": "https://randomuser.me/api/portraits/men/2.jpg"
+        },
+        "comment": "Satisfied with the setup process.",
+        "createdAt": "2025-01-01T13:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "serviceName": "Printer Installation",
+    "category": "Office Equipment",
+    "description": "Installing and configuring printers for office use.",
+    "price": "600",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "3 days",
+    "rating": 4.4,
+    "providerName": "Office Solutions",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Carlos Ruiz",
+          "image": "https://randomuser.me/api/portraits/men/3.jpg"
+        },
+        "comment": "Efficient installation and support.",
+        "createdAt": "2025-01-01T09:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Diana Prince",
+          "image": "https://randomuser.me/api/portraits/women/3.jpg"
+        },
+        "comment": "Highly knowledgeable technicians.",
+        "createdAt": "2025-01-01T14:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "serviceName": "Computer Repair",
+    "category": "IT Support",
+    "description": "Fixing various computer issues efficiently.",
+    "price": "800",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "1 day",
+    "rating": 4.7,
+    "providerName": "TechRepair Hub",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Eve Adams",
+          "image": "https://randomuser.me/api/portraits/women/4.jpg"
+        },
+        "comment": "Quick resolution of my laptop issues!",
+        "createdAt": "2025-01-01T15:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Frank Ocean",
+          "image": "https://randomuser.me/api/portraits/men/4.jpg"
+        },
+        "comment": "Great value for the price.",
+        "createdAt": "2025-01-01T16:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "serviceName": "Antivirus Installation",
+    "category": "Software",
+    "description": "Installing antivirus software for protection.",
+    "price": "300",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "Same day",
+    "rating": 4.3,
+    "providerName": "CyberProtect",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Grace Kelly",
+          "image": "https://randomuser.me/api/portraits/women/5.jpg"
+        },
+        "comment": "Very easy and quick installation process!",
+        "createdAt": "2025-01-01T17:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Hank Moody",
+          "image": "https://randomuser.me/api/portraits/men/5.jpg"
+        },
+        "comment": "Great protection for my devices.",
+        "createdAt": "2025-01-01T18:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "serviceName": "Cable Management",
+    "category": "Office Setup",
+    "description": "Organizing and managing cables neatly.",
+    "price": "200",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "2 days",
+    "rating": 4.5,
+    "providerName": "Setup Pros",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Isabella Swan",
+          "image": "https://randomuser.me/api/portraits/women/6.jpg"
+        },
+        "comment": "My desk looks so much better now!",
+        "createdAt": "2025-01-01T19:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Jack Sparrow",
+          "image": "https://randomuser.me/api/portraits/men/6.jpg"
+        },
+        "comment": "Neat and professional work.",
+        "createdAt": "2025-01-01T20:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "serviceName": "Data Recovery",
+    "category": "IT Support",
+    "description": "Recovering lost or deleted data efficiently.",
+    "price": "1500",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "5 days",
+    "rating": 4.8,
+    "providerName": "Recovery Experts",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Kate Winslet",
+          "image": "https://randomuser.me/api/portraits/women/7.jpg"
+        },
+        "comment": "Recovered all my precious files!",
+        "createdAt": "2025-01-01T21:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Leonardo DiCaprio",
+          "image": "https://randomuser.me/api/portraits/men/7.jpg"
+        },
+        "comment": "Saved my day, amazing service!",
+        "createdAt": "2025-01-01T22:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "serviceName": "Laptop Maintenance",
+    "category": "IT Support",
+    "description": "Routine maintenance for optimal laptop performance.",
+    "price": "700",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "3 days",
+    "rating": 4.6,
+    "providerName": "Laptop Pros",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Maria Gonzalez",
+          "image": "https://randomuser.me/api/portraits/women/8.jpg"
+        },
+        "comment": "Now my laptop runs like new!",
+        "createdAt": "2025-01-01T23:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Nathan Drake",
+          "image": "https://randomuser.me/api/portraits/men/8.jpg"
+        },
+        "comment": "Superb maintenance, worth it.",
+        "createdAt": "2025-01-02T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "serviceName": "Home Network Setup",
+    "category": "Internet",
+    "description": "Setting up home networks for efficient connectivity.",
+    "price": "1000",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "2 days",
+    "rating": 4.9,
+    "providerName": "Network Builders",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Olivia Newton",
+          "image": "https://randomuser.me/api/portraits/women/9.jpg"
+        },
+        "comment": "Perfect setup for my new home!",
+        "createdAt": "2025-01-02T01:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Paul Walker",
+          "image": "https://randomuser.me/api/portraits/men/9.jpg"
+        },
+        "comment": "Fast and reliable service.",
+        "createdAt": "2025-01-02T02:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "serviceName": "Software Troubleshooting",
+    "category": "Software",
+    "description": "Diagnosing and fixing software issues quickly.",
+    "price": "500",
+    "image": "https://images.unsplash.com/photo-1454988501794-2992f706932e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "expectedArrivalTime": "1 day",
+    "rating": 4.5,
+    "providerName": "TechFix",
+    "reviews": [
+      {
+        "reviewer": {
+          "name": "Quinn Harper",
+          "image": "https://randomuser.me/api/portraits/women/10.jpg"
+        },
+        "comment": "They fixed my software in no time!",
+        "createdAt": "2025-01-02T03:00:00Z"
+      },
+      {
+        "reviewer": {
+          "name": "Ryan Gosling",
+          "image": "https://randomuser.me/api/portraits/men/10.jpg"
+        },
+        "comment": "Excellent and fast service.",
+        "createdAt": "2025-01-02T04:00:00Z"
+      }
+    ]
+  }
+]
