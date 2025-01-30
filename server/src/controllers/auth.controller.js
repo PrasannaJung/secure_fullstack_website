@@ -124,17 +124,9 @@ const getUser = asyncHandler(async (req, res) => {
 const updateUser = asyncHandler(async (req, res) => {
   console.log(req.body);
 
-  const { username, image, phone, email } = req.body;
-  const updatedUser = await User.findByIdAndUpdate(
-    req.user.id,
-    {
-      username: username,
-      phone: phone,
-      image,
-      email,
-    },
-    { new: true },
-  );
+  const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
+    new: true,
+  });
 
   return res.json(
     new ApiResponse(true, "User updated successfully", updatedUser),

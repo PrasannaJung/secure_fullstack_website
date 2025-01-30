@@ -48,6 +48,9 @@ const userSchema = new mongoose.Schema({
   image: {
     type: String,
   },
+  email: {
+    type: String,
+  },
 });
 
 // Hash password before saving
