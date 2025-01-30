@@ -10,7 +10,15 @@ const mongoSanitize = require("express-mongo-sanitize");
 
 const errorHandler = require("./utils/errorHandler");
 
-app.use(cors({ origin: "*", credentials: true }));
+app.use(
+  cors({
+    origin: "https://localhost:3000",
+    methods: "GET, POST, PUT, DELETE, OPTIONS",
+    allowedHeaders: "Content-Type, Authorization",
+    credentials: true,
+  }),
+);
+app.options("*", cors());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(xss());
