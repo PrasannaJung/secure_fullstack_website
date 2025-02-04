@@ -66,6 +66,12 @@ const loginUser = asyncHandler(async (req, res) => {
   };
 
   const token = user.generateAuthToken();
+
+  res.cookie("token", token, {
+    httpOnly: true,
+    secure: true,
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+  });
   return res.json(
     new ApiResponse(true, "Login successful", { token, userData }),
   );
@@ -73,7 +79,6 @@ const loginUser = asyncHandler(async (req, res) => {
 
 const verifyOtp = asyncHandler(async (req, res) => {
   const { phone, otp } = req.body;
-
   const user = await User.findOne({ phone });
   if (!user) {
     throw new ApiError(404, "User not found");
@@ -133,6 +138,27 @@ const updateUser = asyncHandler(async (req, res) => {
   );
 });
 
+const changePassword = asyncHandler(async (req, res) => {
+  const { oldPassword, newPassword } = req.body;
+  const user = await User.findById(req.user.id);
+
+  if (!user) {
+    throw new ApiError(404, "User not found");
+  }
+
+  const isMatch = await user.matchPassword(oldPassword);
+  if (!isMatch) {
+    throw new ApiError(400, "Old password is incorrect");
+  }
+
+  try {
+    await user.changePassword(newPassword);
+    return res.json(new ApiResponse(true, "Password changed successfully"));
+  } catch (error) {
+    throw new ApiError(400, error.message);
+  }
+});
+
 module.exports = {
   signupUser,
   loginUser,
@@ -140,4 +166,5 @@ module.exports = {
   resendOtp,
   getUser,
   updateUser,
+  changePassword,
 };
