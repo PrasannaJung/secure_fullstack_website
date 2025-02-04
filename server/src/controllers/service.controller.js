@@ -123,9 +123,29 @@ const getAllServicesNameAndId = asyncHandler(async (req, res, next) => {
   res.json(new ApiResponse(true, "Services fetched successfully", services));
 });
 
+const updateServiceStatus = asyncHandler(async (req, res, next) => {
+  const sid = req.params.id;
+  const { newStatus } = req.body;
+
+  const newService = await Service.findByIdAndUpdate(
+    sid,
+    {
+      status: newStatus,
+    },
+    {
+      new: true,
+    },
+  );
+
+  return res
+    .status(200)
+    .json(new ApiResponse(true, "Status Updated Successfully"), newService);
+});
+
 module.exports = {
   createService,
   getAllServices,
   getSingleService,
   getAllServicesNameAndId,
+  updateServiceStatus,
 };
