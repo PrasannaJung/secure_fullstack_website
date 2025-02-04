@@ -4,7 +4,7 @@ const isAdmin = (req, res, next) => {
   if (req.user.role !== "provider") {
     throw new ApiError(
       403,
-      "Access denied. Not authorized to access this resource",
+      "Access denied. You are not authorized to access this resource",
     );
   }
   next();
