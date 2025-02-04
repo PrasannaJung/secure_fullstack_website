@@ -51,12 +51,24 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
   },
+  previousPasswords: {
+    type: [String],
+    default: [],
+  },
 });
 
 // Hash password before saving
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     return next();
+  }
+
+  // Store last 3 passwords before updating
+  if (this.password) {
+    if (this.previousPasswords.length >= 3) {
+      this.previousPasswords.pop(); // Keep only last 3
+    }
+    this.previousPasswords.unshift(this.password); // Add current password before changing
   }
 
   this.password = await bcrypt.hash(this.password, 12);
@@ -69,7 +81,6 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-// Generate JWT
 userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign(
     {
@@ -90,6 +101,17 @@ userSchema.methods.generateAuthToken = function () {
 userSchema.methods.isPasswordExpired = function () {
   const ninetyDaysAgo = Date.now() - 90 * 24 * 60 * 60 * 1000;
   return this.passwordChangedAt < ninetyDaysAgo;
+};
+
+userSchema.methods.changePassword = async function (newPassword) {
+  for (const oldPassword of this.previousPasswords) {
+    if (await bcrypt.compare(newPassword, oldPassword)) {
+      throw new Error("New password cannot be one of your last 3 passwords.");
+    }
+  }
+
+  this.password = newPassword;
+  await this.save();
 };
 
 userSchema.methods.incrementLoginAttempts = async function () {
@@ -113,6 +135,7 @@ userSchema.methods.resetLoginAttempts = async function () {
   await this.save();
 };
 
-const User = mongoose.model("User", userSchema);
+// Change Password Function
 
+const User = mongoose.model("User", userSchema);
 module.exports = User;
