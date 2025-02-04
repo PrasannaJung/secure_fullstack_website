@@ -16,7 +16,7 @@ export default function Header() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
   const { logout } = useAuth(); // Get user and logout function from useAuth
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("user")) || {};
 
   useEffect(() => {
     const handleScroll = () => {

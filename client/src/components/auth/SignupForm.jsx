@@ -7,13 +7,6 @@ import { LoaderCircle } from "lucide-react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
-const passwordSchema = z
-  .string()
-  .min(8, "At least 8 characters")
-  .regex(/[A-Z]/, "At least one uppercase letter")
-  .regex(/\d/, "At least one number")
-  .regex(/[!@#$%^&*(),.?":{}|<>]/, "At least one special character");
-
 export default function SignupForm() {
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");

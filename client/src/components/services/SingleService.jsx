@@ -125,7 +125,7 @@ const SingleServiceComponent = ({ id }) => {
         {/* Left side - Image */}
         <div className='relative rounded-xl overflow-hidden h-96'>
           <Image
-            src={"http://localhost:5000/" + service.image}
+            src={"https://localhost:5000/" + service.image}
             fill
             style={{
               objectFit: "cover",

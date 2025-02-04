@@ -45,9 +45,13 @@ const useAuth = () => {
   }, []);
 
   // Login function
-  const login = async (phone, password) => {
+  const login = async (phone, password, recaptchaToken) => {
     try {
-      const response = await api.post("/auth/login", { phone, password });
+      const response = await api.post("/auth/login", {
+        phone,
+        password,
+        recaptchaToken,
+      });
       console.log("Full response:", response); // Debug log
 
       if (response.data.success && response.data.data.token) {

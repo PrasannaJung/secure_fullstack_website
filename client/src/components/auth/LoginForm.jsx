@@ -3,19 +3,28 @@ import api from "@/api/api";
 import useAuth from "@/hooks/useAuth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 export default function LoginForm() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const { login } = useAuth();
+
+  useEffect(() => {
+    // Load the reCAPTCHA script
+    const loadRecaptcha = () => {
+      const script = document.createElement("script");
+      script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`;
+      script.async = true;
+      document.body.appendChild(script);
+    };
+    loadRecaptcha();
+  }, []);
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-
     if (!phone || !password) {
       toast.error("Please fill in all fields");
       return;
@@ -23,18 +32,29 @@ export default function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const success = await login(phone, password);
+
+      // Execute reCAPTCHA and get token
+      const recaptchaToken = await window.grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: "login" },
+      );
+
+      // Pass the token to your login function
+      const success = await login(phone, password, recaptchaToken);
 
       if (success) {
         toast.success("Login successful!");
       }
     } catch (error) {
       console.error("Login error:", error);
-      toast.error(error.message || "Login failed. Please try again.");
+      toast.error(
+        error.response.data.message || "Login failed. Please try again.",
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
+
   return (
     <div className='mt-10'>
       <h1 className='text-5xl uppercase font-semibold'>
