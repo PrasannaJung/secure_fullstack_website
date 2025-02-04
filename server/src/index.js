@@ -14,7 +14,10 @@ const sslOptions = {
 
 connectDb()
   .then(() => {
-    https.createServer(sslOptions, app).listen(PORT, () => {
+    // https.createServer(sslOptions, app).listen(PORT, () => {
+    //   console.log(`Server running on port https://localhost:${PORT}`);
+    // });
+    app.listen(PORT, () => {
       console.log(`Server running on port https://localhost:${PORT}`);
     });
   })
